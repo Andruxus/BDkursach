@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Main</title>
+    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html">
+    <meta name="description" content="Описание страницы 'Главная'">
+    <link rel="stylesheet" type="text/css" href="../../../res/style.css">
+</head>
+<body>
+<header>
+    <div id="line">
+        <div id="logo">
+            <img src="../../../res/logo.jpg" height="100%" width="100%">
+        </div>
+        <nav>
+            <ul class="asd">
+                <li class=asd1> <a href="/main">Main</a></li>
+                <li class=asd1> <a href="#" th:text="${client}">VALUE</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<section>
+    <p>Choose a tour!</p>
+    <ul>
+        <div th:each="tour : ${tours}">
+            <table border="1">
+                <tr>
+                    <td  th:text="${tour.getName()}">Столбец 1</td>
+                    <td th:text="${tour.getPrice()}">Столбец 2</td>
+                    <td th:text="${tour.getDate()}">Столбец 3</td>
+                    <td th:text="${tour.getCountry()}">Столбец 4</td>
+                    <td th:text="${tour.getOperator()}">Столбец 5</td>
+                    <td th:text="${tour.getPeople()}">Столбец 6</td>
+                    <td th:text="${tour.getDays()}">Столбец 7</td>
+                    <a href="/autorize" style="color:red">Choose!</a>
+                </tr>
+        </div>
+    </ul>
+
+</section>
+</body>
+</html>

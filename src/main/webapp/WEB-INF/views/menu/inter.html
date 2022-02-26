@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+    <head>
+    <title>Enter</title>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="description" content="Описание страницы 'Главная'">
+        <link rel="stylesheet" type="text/css" href="../../../res/style.css">
+    </head>
+    <body>
+    <header>
+        <div id="line">
+            <div id="logo">
+                <img src="../../../res/logo.jpg" height="100%" width="100%">
+            </div>
+            <nav>
+                <ul class="asd">
+                    <li class=asd1> <a href="/main">Main</a></li>
+                    <li class=asd1> <a href="/inter">Enter</a></li>
+                    <li class=asd1><a href="/autorize">Register</a></li>
+                    <li class=asd1><a href="/tims">Worker</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+        <div class="container">
+            <h1>Enter</h1>
+            <p>Please fill out this form to log in to your account.</p>
+            <hr>
+            <form th:method="POST" th:action="@{/mainUserEnter}" th:object="${client}">
+            <label ><b>Name</b></label>
+            <input type="text" th:field="*{firstName}" placeholder="Enter a name" name="name" required>
+            <label ><b>Surname</b></label>
+            <input type="text" th:field="*{secondName}" placeholder="Enter a Surname" name="surname" required>
+
+            <label ><b>Number</b></label>
+            <input type="password" th:field="*{numbers}" placeholder="Enter a number" name="psw-repeat" required>
+            <hr>
+                <input type="submit" value="Enter!"/>
+            </form>
+
+
+        </div>
+    </body>
+</html>

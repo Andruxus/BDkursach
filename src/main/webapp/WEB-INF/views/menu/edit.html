@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Edit</title>
+</head>
+<body>
+<form th:method="PATCH" th:action="@{/{id}(id=${tour.getId()})}" th:object="${tour}">
+    <label for="name">Enter name: </label>
+    <input type="text" th:field="*{name}" id="name"/>
+    <label for="price">Enter price: </label>
+    <input type="text" th:field="*{price}" id="price"/>
+    <label for="date">Enter date: </label>
+    <input type="text" th:field="*{date}" id="date"/>
+    <label for="country">Enter country: </label>
+    <input type="text" th:field="*{country}" id="country"/>
+    <label for="operator">Enter operator: </label>
+    <input type="text" th:field="*{operator}" id="operator"/>
+    <label for="people">Enter people: </label>
+    <input type="text" th:field="*{people}" id="people"/>
+    <label for="days">Enter days: </label>
+    <input type="text" th:field="*{days}" id="days"/>
+    <input type="submit" value="Edit film">
+</form>
+</body>
+</html>
